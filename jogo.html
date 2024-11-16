@@ -11,13 +11,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="tela">
     <div class="container-jogo">
         <div class="container-gameplay">
             <div class="container-oponente">
                 <div class="status-oponente">
                     <div class="nomePkmAd font">Teste nome</div>
                     <div class="nivelPkmAd font"> LvTeste</div>
-                    <div class="vidaPkmAd font">Hp</div>
+                    <div class="vidaPkmAd font">
+                        <div class="vidaPkmOponente" id="vidaPkmOponente"></div>
+                    </div>
                 </div>
                 <div class="pkm-oponente">
 
@@ -30,7 +33,9 @@
                 <div class="status-jogador"> 
                     <div class="nomePkmJg font">Teste nome</div>
                     <div class="nivelPkmJg font"> LvTeste</div>
-                    <div class="vidaPkmJg font">Hp</div>               
+                    <div class="vidaPkmJg font">
+                        <div class="vidaPkmJogador"></div>
+                    </div>               
                 </div>
             </div>
         </div>
@@ -43,7 +48,7 @@
                     <img src="assets/img/arrowrRight.png" id="setaLuta" class="seta">
                 </div>
                 <div class="luta">
-                    <p class="font op-interacao" onmouseover="setaa()" onmouseout="setae()">FIGHT</p>
+                    <p class="font op-interacao" onmouseover="setaa()" onmouseout="setae()" onclick="ataque()">FIGHT</p>
                 </div>
                 <div class="setaBag">
                     <img src="assets/img/arrowrRight.png" id="setaLuta" class="seta">
@@ -66,5 +71,15 @@
             </div>
         </div>
     </div>
+
+    <div class="ataqueJogador" id="ataqueJogador">
+        <div class="ataqueOp">
+         <button onclick="ataque1()">Ataque 1</button> 
+         <button onclick="ataque2()">Ataque 2</button>
+         <button onclick="ataque3()">Ataque 3</button>
+         <button onclick="ataque4()">Ataque 4</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
